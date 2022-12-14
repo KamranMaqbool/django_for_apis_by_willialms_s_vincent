@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     # Local
     "books.apps.BooksConfig",
     "apis.apps.ApisConfig",
-    "todos.apps.TodosConfig"
+    "todos.apps.TodosConfig",
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -146,4 +147,6 @@ CORS_ALLOWED_ORIGINS = (
     "http://localhost:8000",
 )
 
-CSRF_TRUSTED_ORIGINS = ["localhost:3000"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
+AUTH_USER_MODEL = "accounts.CustomUser"
